@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dudj7nvfa1rgp"]
+
+[node name="LinkDialog" type="FileDialog"]
+title = "Link Handle to File"
+initial_position = 2
+size = Vector2i(500, 400)
+visible = true
+popup_window = true
+ok_button_text = "Link"
+mode_overrides_title = false
+access = 2
+filters = PackedStringArray("*.txt")

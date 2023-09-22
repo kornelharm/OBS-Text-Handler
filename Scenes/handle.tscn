@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2vf60r78lpll"]
+
+[ext_resource type="Script" path="res://Scripts/Handle.gd" id="1_40sln"]
+[ext_resource type="Texture2D" uid="uid://c6nmm3uflilid" path="res://Images/Trash24x24.png" id="2_70euy"]
+[ext_resource type="Texture2D" uid="uid://dwvv3choha6q0" path="res://Images/Chain24x24.png" id="2_p7bvd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s0glk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rggqa"]
+font_size = 12
+
+[node name="Handle" type="MarginContainer"]
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+script = ExtResource("1_40sln")
+
+[node name="HandleSep" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HandleTitle" type="LineEdit" parent="HandleSep"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+focus_mode = 1
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s0glk")
+text = "New Handle"
+alignment = 2
+flat = true
+select_all_on_focus = true
+
+[node name="AttachButton" type="Button" parent="HandleSep"]
+layout_mode = 2
+focus_mode = 1
+icon = ExtResource("2_p7bvd")
+icon_alignment = 1
+
+[node name="DeleteButton" type="Button" parent="HandleSep"]
+layout_mode = 2
+focus_mode = 1
+icon = ExtResource("2_70euy")
+icon_alignment = 1
+
+[node name="HandleValue" type="LineEdit" parent="HandleSep"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/selection_color = Color(0.12549, 0.584314, 0.752941, 1)
+clear_button_enabled = true
+
+[node name="FilePathScroll" type="ScrollContainer" parent="HandleSep"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="FilePathText" type="Label" parent="HandleSep/FilePathScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Unlinked"
+label_settings = SubResource("LabelSettings_rggqa")
+vertical_alignment = 1

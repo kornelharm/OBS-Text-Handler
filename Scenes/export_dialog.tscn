@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bjifix4snexnk"]
+
+[node name="ExportDialog" type="FileDialog"]
+title = "Export Profile"
+initial_position = 2
+size = Vector2i(500, 400)
+visible = true
+popup_window = true
+ok_button_text = "Export"
+mode_overrides_title = false
+access = 2
+filters = PackedStringArray("*.json")

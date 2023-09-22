@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bg5uqsy8gu4wj"]
+
+[node name="ImportDialog" type="FileDialog"]
+title = "Import Profile"
+initial_position = 2
+size = Vector2i(500, 400)
+visible = true
+popup_window = true
+ok_button_text = "Open"
+mode_overrides_title = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.json")
