@@ -1,12 +1,16 @@
-[gd_scene format=3 uid="uid://dudj7nvfa1rgp"]
+[gd_scene load_steps=3 format=3 uid="uid://dudj7nvfa1rgp"]
+
+[ext_resource type="Theme" uid="uid://cvfdhnvtm15xt" path="res://Themes/DialogTheme.tres" id="1_li5lf"]
+[ext_resource type="Script" path="res://Scenes/FileDialog.gd" id="2_tf4et"]
 
 [node name="LinkDialog" type="FileDialog"]
 title = "Link Handle to File"
 initial_position = 2
-size = Vector2i(500, 400)
+size = Vector2i(800, 400)
 visible = true
-popup_window = true
+theme = ExtResource("1_li5lf")
 ok_button_text = "Link"
 mode_overrides_title = false
 access = 2
 filters = PackedStringArray("*.txt")
+script = ExtResource("2_tf4et")

@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpq5kutahplcu"]
+[gd_scene load_steps=10 format=3 uid="uid://dpq5kutahplcu"]
 
+[ext_resource type="Theme" uid="uid://cvfdhnvtm15xt" path="res://Themes/DialogTheme.tres" id="1_2lhob"]
 [ext_resource type="Script" path="res://Scripts/AddHandleButton.gd" id="1_wfkgo"]
 [ext_resource type="Script" path="res://Scripts/ImportProfileButton.gd" id="2_gvyq3"]
 [ext_resource type="Script" path="res://Scripts/ExportProfileButton.gd" id="3_1xk8q"]
@@ -8,12 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://b2vf60r78lpll" path="res://Scenes/handle.tscn" id="6_htexe"]
 [ext_resource type="Script" path="res://Scripts/SaveButton.gd" id="7_w0hq6"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_obfki"]
+
 [node name="Root" type="PanelContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_2lhob")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -35,6 +39,7 @@ alignment = 1
 
 [node name="AddHandleButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_obfki")
 action_mode = 0
 text = "Add Handle"
 script = ExtResource("1_wfkgo")
@@ -67,17 +72,8 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 5
 script = ExtResource("5_4owol")
 
-[node name="Handle" parent="MarginContainer/VBoxContainer/HandleScroll/HandleList" instance=ExtResource("6_htexe")]
+[node name="Initial Handle" parent="MarginContainer/VBoxContainer/HandleScroll/HandleList" instance=ExtResource("6_htexe")]
 layout_mode = 2
-theme_override_constants/margin_top = 2
-
-[node name="Handle2" parent="MarginContainer/VBoxContainer/HandleScroll/HandleList" instance=ExtResource("6_htexe")]
-layout_mode = 2
-theme_override_constants/margin_top = 2
-
-[node name="Handle3" parent="MarginContainer/VBoxContainer/HandleScroll/HandleList" instance=ExtResource("6_htexe")]
-layout_mode = 2
-theme_override_constants/margin_top = 2
 
 [node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

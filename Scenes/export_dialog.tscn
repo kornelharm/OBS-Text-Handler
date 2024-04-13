@@ -1,11 +1,14 @@
-[gd_scene format=3 uid="uid://bjifix4snexnk"]
+[gd_scene load_steps=2 format=3 uid="uid://bjifix4snexnk"]
+
+[ext_resource type="Theme" uid="uid://cvfdhnvtm15xt" path="res://Themes/DialogTheme.tres" id="1_4y7ou"]
 
 [node name="ExportDialog" type="FileDialog"]
 title = "Export Profile"
 initial_position = 2
-size = Vector2i(500, 400)
+size = Vector2i(800, 400)
 visible = true
 popup_window = true
+theme = ExtResource("1_4y7ou")
 ok_button_text = "Export"
 mode_overrides_title = false
 access = 2

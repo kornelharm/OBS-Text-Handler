@@ -5,7 +5,7 @@
 [node name="Window" type="Popup"]
 title = "Info"
 initial_position = 2
-size = Vector2i(200, 200)
+size = Vector2i(313, 220)
 visible = true
 borderless = false
 content_scale_mode = 2
@@ -22,40 +22,43 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="Author" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Author" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 10
 text = "Author"
 vertical_alignment = 1
 
-[node name="Version" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Version" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 10
 text = "Version"
 vertical_alignment = 1
 
-[node name="Date" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Date" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 10
 text = "Date"
 vertical_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
 
-[node name="AuthorValue" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="AuthorValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 10
@@ -63,18 +66,33 @@ text = "Kornel Harmati"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="VersionValue" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="VersionValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 10
-text = "1.0.0"
+text = "1.0.1"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="DateValue" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="DateValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 10
-text = "Sep 2023"
+text = "April 2024"
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Panel" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Panel"]
+clip_contents = false
+layout_mode = 2
+focus_mode = 2
+bbcode_enabled = true
+text = "[url=\"https://github.com/kornelharm/OBS-Text-Handler\"]GitHub[/url]"
+fit_content = true
+autowrap_mode = 0
+context_menu_enabled = true
+selection_enabled = true
