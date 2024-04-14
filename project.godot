@@ -12,6 +12,8 @@ config_version=5
 
 config/name="OBS Text Handler"
 run/main_scene="res://Scenes/main.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="OBS-Text-Handler"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/show_image=false
 config/icon="res://Images/OBS Text Handler.png"
