@@ -38,7 +38,7 @@ func clear_handle_list():
 func _on_new_handle_button_down():
 	add_handle("New Handle", "")
 
-func get_persistent_value(keMy):
+func get_persistent_value(key):
 	return persistentValues[key]
 
 func set_persistent_values(keys : Array, vals : Array):
