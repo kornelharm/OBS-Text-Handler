@@ -21,8 +21,8 @@ config/windows_native_icon="res://Images/OBS Text Handler.ico"
 
 [autoload]
 
-Main="*res://Scripts/main.gd"
-Profiler="*res://Scripts/profiler.gd"
+Main="*res://Scripts/Main.gd"
+Profiler="*res://Scripts/ConfigurationHandler.gd"
 
 [input]
 
